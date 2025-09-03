@@ -1,0 +1,221 @@
+{
+  "title": "Deutsch B1 - Mittelstufe Grammatik & Wortschatz",
+  "description": "Umfassendes Lernpaket für Deutsch als Fremdsprache auf B1-Niveau. Behandelt komplexe Grammatik, erweiterten Wortschatz und Sprachstrukturen.",
+  "tags": ["Deutsch", "B1", "Grammatik", "Wortschatz", "Mittelstufe", "DaF"],
+  "public": true,
+  "items": [
+    {
+      "id": "de-001",
+      "text": "Welche Konjunktionen erfordern die Umstellung der Wortstellung im Nebensatz?",
+      "type": "multi",
+      "options": [
+        {
+          "id": "a",
+          "text": "weil",
+          "correct": true,
+          "explanation": "'Weil' ist eine subordinierende Konjunktion und schickt das Verb ans Ende des Nebensatzes."
+        },
+        {
+          "id": "b",
+          "text": "aber",
+          "explanation": "'Aber' ist eine koordinierende Konjunktion und verändert die Wortstellung nicht."
+        },
+        {
+          "id": "c",
+          "text": "dass",
+          "correct": true,
+          "explanation": "'Dass' leitet einen Nebensatz ein und erfordert die Endstellung des Verbs."
+        },
+        {
+          "id": "d",
+          "text": "obwohl",
+          "correct": true,
+          "explanation": "'Obwohl' ist eine subordinierende Konjunktion für Konzessivsätze."
+        },
+        {
+          "id": "e",
+          "text": "und",
+          "explanation": "'Und' ist eine koordinierende Konjunktion ohne Wortstellungsänderung."
+        }
+      ]
+    },
+    {
+      "id": "de-002",
+      "text": "Wählen Sie die korrekte Form des Konjunktiv II von 'haben':",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "ich hätte",
+          "correct": true,
+          "explanation": "Der Konjunktiv II von 'haben' wird mit Umlaut gebildet: hätte, hättest, hätte..."
+        },
+        {
+          "id": "b",
+          "text": "ich habe"
+        },
+        {
+          "id": "c",
+          "text": "ich hatte"
+        },
+        {
+          "id": "d",
+          "text": "ich würde haben"
+        }
+      ]
+    },
+    {
+      "id": "de-003",
+      "text": "Erklären Sie den Unterschied zwischen Akkusativ und Dativ anhand von Beispielen.",
+      "type": "text",
+      "explanation": "Akkusativ ist der 4. Fall (direktes Objekt): 'Ich kaufe einen Apfel.' - Frage: Wen oder was? Dativ ist der 3. Fall (indirektes Objekt): 'Ich gebe dem Kind einen Apfel.' - Frage: Wem? Dativ bezeichnet oft den Empfänger einer Handlung, Akkusativ das direkt betroffene Objekt."
+    },
+    {
+      "id": "de-004",
+      "text": "Welche Präpositionen regieren den Dativ?",
+      "type": "multi",
+      "options": [
+        {
+          "id": "a",
+          "text": "mit",
+          "correct": true,
+          "explanation": "'Mit' regiert immer den Dativ: 'mit dem Auto', 'mit der Freundin'"
+        },
+        {
+          "id": "b",
+          "text": "durch",
+          "explanation": "'Durch' regiert den Akkusativ: 'durch den Park'"
+        },
+        {
+          "id": "c",
+          "text": "bei",
+          "correct": true,
+          "explanation": "'Bei' regiert immer den Dativ: 'bei dem Arzt', 'bei der Arbeit'"
+        },
+        {
+          "id": "d",
+          "text": "von",
+          "correct": true,
+          "explanation": "'Von' regiert immer den Dativ: 'von dem Lehrer', 'von der Schule'"
+        },
+        {
+          "id": "e",
+          "text": "für",
+          "explanation": "'Für' regiert den Akkusativ: 'für den Bruder'"
+        }
+      ]
+    },
+    {
+      "id": "de-005",
+      "text": "Was ist ein Modalverb und nennen Sie die sechs wichtigsten.",
+      "type": "text",
+      "explanation": "Modalverben drücken die Modalität (Art und Weise) einer Handlung aus - wie Möglichkeit, Notwendigkeit, Erlaubnis oder Wunsch. Die sechs wichtigsten sind: können (Fähigkeit), müssen (Notwendigkeit), wollen (Wunsch), sollen (Aufforderung), dürfen (Erlaubnis), mögen/möchten (Wunsch/Höflichkeit)."
+    },
+    {
+      "id": "de-006",
+      "text": "Wann verwendet man das Perfekt und wann das Präteritum?",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Perfekt nur für Vergangenheit, Präteritum nur für Gegenwart"
+        },
+        {
+          "id": "b",
+          "text": "Perfekt in gesprochener Sprache, Präteritum in geschriebener Sprache",
+          "correct": true,
+          "explanation": "Im gesprochenen Deutsch verwendet man meist Perfekt, in geschriebenen Texten und formeller Sprache Präteritum."
+        },
+        {
+          "id": "c",
+          "text": "Beide sind völlig austauschbar"
+        },
+        {
+          "id": "d",
+          "text": "Präteritum nur für Modalverben"
+        }
+      ]
+    },
+    {
+      "id": "de-007",
+      "text": "Welche Adjektive werden nach dem bestimmten Artikel schwach dekliniert?",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Nur Adjektive mit -e Endung"
+        },
+        {
+          "id": "b",
+          "text": "Alle Adjektive nach der/die/das",
+          "correct": true,
+          "explanation": "Nach dem bestimmten Artikel (der/die/das) werden Adjektive schwach dekliniert: der große Mann, die schöne Frau, das kleine Kind."
+        },
+        {
+          "id": "c",
+          "text": "Nur einsilbige Adjektive"
+        },
+        {
+          "id": "d",
+          "text": "Adjektive werden nie nach Artikeln dekliniert"
+        }
+      ]
+    },
+    {
+      "id": "de-008",
+      "text": "Bilden Sie einen korrekten Relativsatz mit 'der Mann':",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Der Mann, der arbeitet, ist müde.",
+          "correct": true,
+          "explanation": "Korrekte Relativsatzbildung: Relativpronomen 'der' bezieht sich auf 'Mann' (maskulin, Nominativ)."
+        },
+        {
+          "id": "b",
+          "text": "Der Mann, den arbeitet, ist müde."
+        },
+        {
+          "id": "c",
+          "text": "Der Mann arbeitet, ist müde."
+        },
+        {
+          "id": "d",
+          "text": "Der Mann, was arbeitet, ist müde."
+        }
+      ]
+    },
+    {
+      "id": "de-009",
+      "text": "Was ist der Unterschied zwischen 'als' und 'wenn' in Temporalsätzen?",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "'Als' für einmalige Vergangenheit, 'wenn' für Wiederholung oder Zukunft",
+          "correct": true,
+          "explanation": "'Als' für einmalige Ereignisse in der Vergangenheit: 'Als ich Kind war...' 'Wenn' für wiederholte oder zukünftige Ereignisse: 'Wenn es regnet...' oder 'Immer wenn ich...'"
+        },
+        {
+          "id": "b",
+          "text": "Beide sind identisch"
+        },
+        {
+          "id": "c",
+          "text": "'Als' nur für Gegenwart, 'wenn' nur für Vergangenheit"
+        },
+        {
+          "id": "d",
+          "text": "'Als' ist formeller als 'wenn'"
+        }
+      ]
+    },
+    {
+      "id": "de-010",
+      "text": "Erklären Sie die Verwendung von 'werden' als Vollverb und als Hilfsverb.",
+      "type": "text",
+      "explanation": "Als Vollverb bedeutet 'werden' eine Veränderung: 'Es wird kalt' (wird zu etwas anderem). Als Hilfsverb dient es zur Bildung von: 1) Futur I: 'Ich werde kommen', 2) Futur II: 'Ich werde gekommen sein', 3) Passiv: 'Das Auto wird repariert' (Vorgangspassiv). Beim Passiv steht das Partizip II am Ende."
+    }
+  ]
+}

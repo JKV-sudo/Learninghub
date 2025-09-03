@@ -1,0 +1,209 @@
+{
+  "title": "Cybersecurity Awareness - IT-Sicherheit im Alltag",
+  "description": "Wichtiges Basiswissen für IT-Sicherheit. Behandelt Phishing, Passwort-Sicherheit, Social Engineering und bewährte Sicherheitspraktiken.",
+  "tags": ["Cybersecurity", "IT-Sicherheit", "Phishing", "Passwords", "Social Engineering"],
+  "public": true,
+  "items": [
+    {
+      "id": "cyber-001",
+      "text": "Was sind typische Anzeichen einer Phishing-E-Mail?",
+      "type": "multi",
+      "options": [
+        {
+          "id": "a",
+          "text": "Dringende Aufforderungen zum sofortigen Handeln",
+          "correct": true,
+          "explanation": "Phishing-E-Mails erzeugen oft künstlichen Zeitdruck, um Opfer zu unüberlegtem Handeln zu verleiten."
+        },
+        {
+          "id": "b",
+          "text": "Rechtschreibfehler und grammatikalische Fehler",
+          "correct": true,
+          "explanation": "Professionelle Unternehmen haben normalerweise gute Rechtschreibung und Grammatik."
+        },
+        {
+          "id": "c",
+          "text": "Anfrage nach persönlichen Daten oder Passwörtern",
+          "correct": true,
+          "explanation": "Seriöse Unternehmen fragen niemals per E-Mail nach sensiblen Daten."
+        },
+        {
+          "id": "d",
+          "text": "Personalisierte Anrede mit vollständigem Namen",
+          "explanation": "Phishing-E-Mails verwenden oft unpersönliche Anreden wie 'Lieber Kunde'."
+        }
+      ]
+    },
+    {
+      "id": "cyber-002",
+      "text": "Was macht ein starkes Passwort aus?",
+      "type": "multi",
+      "options": [
+        {
+          "id": "a",
+          "text": "Mindestens 12 Zeichen lang",
+          "correct": true,
+          "explanation": "Längere Passwörter sind exponentiell schwerer zu knacken."
+        },
+        {
+          "id": "b",
+          "text": "Kombination aus Groß- und Kleinbuchstaben, Zahlen und Sonderzeichen",
+          "correct": true,
+          "explanation": "Komplexe Zeichen erhöhen die Anzahl möglicher Kombinationen drastisch."
+        },
+        {
+          "id": "c",
+          "text": "Verwendung des eigenen Namens oder Geburtsanums",
+          "explanation": "Persönliche Informationen sind leicht zu erraten und machen Passwörter schwach."
+        },
+        {
+          "id": "d",
+          "text": "Einzigartig für jeden Account",
+          "correct": true,
+          "explanation": "Wenn ein Passwort kompromittiert wird, sind nicht alle Accounts betroffen."
+        }
+      ]
+    },
+    {
+      "id": "cyber-003",
+      "text": "Was ist Two-Factor Authentication (2FA)?",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ein System mit zwei Passwörtern"
+        },
+        {
+          "id": "b",
+          "text": "Eine zusätzliche Sicherheitsschicht neben dem Passwort",
+          "correct": true,
+          "explanation": "2FA erfordert zwei verschiedene Authentifizierungsfaktoren: etwas das Sie wissen (Passwort) und etwas das Sie haben (z.B. Smartphone)."
+        },
+        {
+          "id": "c",
+          "text": "Ein Passwort-Manager"
+        },
+        {
+          "id": "d",
+          "text": "Eine Verschlüsselungsmethode"
+        }
+      ]
+    },
+    {
+      "id": "cyber-004",
+      "text": "Beschreiben Sie eine Social Engineering Attacke und wie man sich davor schützen kann.",
+      "type": "text",
+      "explanation": "Social Engineering nutzt menschliche Psychologie und Vertrauen aus, um an vertrauliche Informationen zu gelangen. Beispiel: Ein Angreifer gibt sich telefonisch als IT-Support aus und bittet um Passwörter. Schutz: Identität immer verifizieren, keine sensiblen Daten über ungesicherte Kanäle preisgeben, Unternehmensrichtlinien befolgen."
+    },
+    {
+      "id": "cyber-005",
+      "text": "Was sollten Sie tun, wenn Sie eine verdächtige E-Mail erhalten?",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Sofort alle Links anklicken um zu prüfen ob sie echt sind"
+        },
+        {
+          "id": "b",
+          "text": "Die E-Mail an die IT-Abteilung weiterleiten und nicht auf Links klicken",
+          "correct": true,
+          "explanation": "Bei Verdacht auf Phishing sollten Sie die E-Mail melden und keine Links anklicken oder Anhänge öffnen."
+        },
+        {
+          "id": "c",
+          "text": "Das E-Mail-Konto sofort löschen"
+        },
+        {
+          "id": "d",
+          "text": "Die E-Mail ignorieren und löschen"
+        }
+      ]
+    },
+    {
+      "id": "cyber-006",
+      "text": "Was ist ein VPN und wofür wird es verwendet?",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ein Antivirenprogramm"
+        },
+        {
+          "id": "b",
+          "text": "Ein verschlüsselter Tunnel für Internetverbindungen",
+          "correct": true,
+          "explanation": "VPN (Virtual Private Network) verschlüsselt Ihre Internetverbindung und schützt Ihre Privatsphäre."
+        },
+        {
+          "id": "c",
+          "text": "Ein Passwort-Manager"
+        },
+        {
+          "id": "d",
+          "text": "Eine Firewall-Software"
+        }
+      ]
+    },
+    {
+      "id": "cyber-007",
+      "text": "Welche Risiken bestehen bei der Nutzung öffentlicher WiFi-Netzwerke?",
+      "type": "multi",
+      "options": [
+        {
+          "id": "a",
+          "text": "Man-in-the-Middle Attacken",
+          "correct": true,
+          "explanation": "Angreifer können sich zwischen Sie und den Access Point schalten und Daten abfangen."
+        },
+        {
+          "id": "b",
+          "text": "Unverschlüsselte Datenübertragung",
+          "correct": true,
+          "explanation": "Viele öffentliche WiFis verwenden keine oder schwache Verschlüsselung."
+        },
+        {
+          "id": "c",
+          "text": "Fake Access Points",
+          "correct": true,
+          "explanation": "Angreifer können gefälschte WiFi-Hotspots erstellen um Daten zu stehlen."
+        },
+        {
+          "id": "d",
+          "text": "Höhere Stromkosten",
+          "explanation": "Stromkosten sind kein Sicherheitsrisiko von öffentlichem WiFi."
+        }
+      ]
+    },
+    {
+      "id": "cyber-008",
+      "text": "Was sollten Sie tun, um Ihre Geräte sicher zu halten?",
+      "type": "multi",
+      "options": [
+        {
+          "id": "a",
+          "text": "Regelmäßige Software-Updates installieren",
+          "correct": true,
+          "explanation": "Updates schließen oft Sicherheitslücken und sind essentiell für die Gerätesicherheit."
+        },
+        {
+          "id": "b",
+          "text": "Antiviren-Software verwenden",
+          "correct": true,
+          "explanation": "Antiviren-Software erkennt und blockiert schädliche Software."
+        },
+        {
+          "id": "c",
+          "text": "Automatische Updates deaktivieren",
+          "explanation": "Automatische Updates sollten aktiviert sein, um zeitnahe Sicherheitspatches zu erhalten."
+        },
+        {
+          "id": "d",
+          "text": "Regelmäßige Datensicherungen erstellen",
+          "correct": true,
+          "explanation": "Backups schützen vor Datenverlust durch Ransomware oder Hardware-Defekte."
+        }
+      ]
+    }
+  ]
+}

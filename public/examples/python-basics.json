@@ -1,0 +1,200 @@
+{
+  "title": "Python Basics - Programmieren lernen",
+  "description": "Grundlegendes Lernpaket für Python-Einsteiger. Behandelt Datentypen, Kontrollstrukturen, Funktionen und Object-Oriented Programming.",
+  "tags": ["Python", "Programming", "Basics", "OOP", "Data Types"],
+  "public": true,
+  "items": [
+    {
+      "id": "python-001",
+      "text": "Welche der folgenden sind Python-Datentypen?",
+      "type": "multi",
+      "options": [
+        {
+          "id": "a",
+          "text": "int (Integer)",
+          "correct": true,
+          "explanation": "int ist ein eingebauter numerischer Datentyp für ganze Zahlen."
+        },
+        {
+          "id": "b",
+          "text": "string (String)",
+          "correct": false,
+          "explanation": "In Python heißt der String-Datentyp 'str', nicht 'string'."
+        },
+        {
+          "id": "c",
+          "text": "list (Liste)",
+          "correct": true,
+          "explanation": "list ist ein eingebauter Container-Datentyp für veränderbare Sequenzen."
+        },
+        {
+          "id": "d",
+          "text": "dict (Dictionary)",
+          "correct": true,
+          "explanation": "dict ist ein eingebauter Mapping-Datentyp für Key-Value-Paare."
+        },
+        {
+          "id": "e",
+          "text": "bool (Boolean)",
+          "correct": true,
+          "explanation": "bool ist ein eingebauter Datentyp mit den Werten True und False."
+        }
+      ]
+    },
+    {
+      "id": "python-002",
+      "text": "Wie definiert man eine Funktion in Python?",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "def function_name():",
+          "correct": true,
+          "explanation": "Das 'def' Keyword definiert eine Funktion, gefolgt vom Namen und Parametern."
+        },
+        {
+          "id": "b",
+          "text": "function function_name() {}",
+          "correct": false
+        },
+        {
+          "id": "c",
+          "text": "create function_name()",
+          "correct": false
+        },
+        {
+          "id": "d",
+          "text": "func function_name():",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "python-003",
+      "text": "Was ist der Unterschied zwischen einer Liste und einem Tupel in Python?",
+      "type": "text",
+      "explanation": "Listen sind veränderbar (mutable) - Elemente können hinzugefügt, entfernt oder geändert werden. Tupel sind unveränderbar (immutable) - nach der Erstellung können keine Änderungen vorgenommen werden. Listen verwenden [] Klammern, Tupel verwenden () Klammern."
+    },
+    {
+      "id": "python-004",
+      "text": "Welches Ergebnis liefert dieser Python-Code: len([1, 2, 3, 4, 5])?",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "4",
+          "correct": false
+        },
+        {
+          "id": "b",
+          "text": "5",
+          "correct": true,
+          "explanation": "len() gibt die Anzahl der Elemente zurück. Die Liste hat 5 Elemente."
+        },
+        {
+          "id": "c",
+          "text": "Error",
+          "correct": false
+        },
+        {
+          "id": "d",
+          "text": "None",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "python-005",
+      "text": "Was sind die Prinzipien der objektorientierten Programmierung?",
+      "type": "multi",
+      "options": [
+        {
+          "id": "a",
+          "text": "Encapsulation (Kapselung)",
+          "correct": true,
+          "explanation": "Kapselung verbirgt interne Details einer Klasse und bietet kontrollierte Zugriffe."
+        },
+        {
+          "id": "b",
+          "text": "Inheritance (Vererbung)",
+          "correct": true,
+          "explanation": "Vererbung ermöglicht es, Eigenschaften von einer Klasse an eine andere weiterzugeben."
+        },
+        {
+          "id": "c",
+          "text": "Polymorphism (Polymorphismus)",
+          "correct": true,
+          "explanation": "Polymorphismus erlaubt verschiedenen Objekten, auf gleiche Nachrichten unterschiedlich zu reagieren."
+        },
+        {
+          "id": "d",
+          "text": "Abstraction (Abstraktion)",
+          "correct": true,
+          "explanation": "Abstraktion fokussiert auf wesentliche Eigenschaften und verbirgt komplexe Details."
+        }
+      ]
+    },
+    {
+      "id": "python-006",
+      "text": "Welche Python-Schleife würden Sie für eine unbekannte Anzahl von Iterationen verwenden?",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "for-Schleife",
+          "correct": false
+        },
+        {
+          "id": "b",
+          "text": "while-Schleife",
+          "correct": true,
+          "explanation": "while-Schleifen sind ideal, wenn die Anzahl der Iterationen unbekannt ist."
+        },
+        {
+          "id": "c",
+          "text": "do-while-Schleife",
+          "correct": false
+        },
+        {
+          "id": "d",
+          "text": "foreach-Schleife",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "python-007",
+      "text": "Erklären Sie was List Comprehensions sind und geben Sie ein Beispiel.",
+      "type": "text",
+      "explanation": "List Comprehensions sind eine kompakte Art, Listen in Python zu erstellen. Sie kombinieren eine Schleife und optional eine Bedingung in einer einzigen Zeile. Beispiel: [x*2 for x in range(5)] erstellt [0, 2, 4, 6, 8]. Mit Bedingung: [x for x in range(10) if x % 2 == 0] für gerade Zahlen."
+    },
+    {
+      "id": "python-008",
+      "text": "Was ist der Unterschied zwischen '==' und 'is' in Python?",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "'==' vergleicht Werte, 'is' vergleicht Objektidentität",
+          "correct": true,
+          "explanation": "'==' prüft Wertgleichheit, 'is' prüft ob beide Variablen auf das gleiche Objekt verweisen."
+        },
+        {
+          "id": "b",
+          "text": "Beide sind identisch",
+          "correct": false
+        },
+        {
+          "id": "c",
+          "text": "'is' vergleicht Werte, '==' vergleicht Objektidentität",
+          "correct": false
+        },
+        {
+          "id": "d",
+          "text": "'is' ist nur für Strings verwendbar",
+          "correct": false
+        }
+      ]
+    }
+  ]
+}

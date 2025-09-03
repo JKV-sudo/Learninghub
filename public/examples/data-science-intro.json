@@ -1,0 +1,223 @@
+{
+  "title": "Data Science Einführung - Analytics & Machine Learning",
+  "description": "Grundlagen der Datenwissenschaft: Statistik, Machine Learning Algorithmen, Data Visualization und praktische Anwendungen in Python.",
+  "tags": ["Data Science", "Machine Learning", "Statistics", "Python", "Analytics", "AI"],
+  "public": true,
+  "items": [
+    {
+      "id": "ds-001",
+      "text": "Was sind die Hauptphasen des Data Science Prozesses?",
+      "type": "multi",
+      "options": [
+        {
+          "id": "a",
+          "text": "Data Collection (Datensammlung)",
+          "correct": true,
+          "explanation": "Der erste Schritt ist das Sammeln relevanter Daten aus verschiedenen Quellen."
+        },
+        {
+          "id": "b",
+          "text": "Data Cleaning (Datenbereinigung)",
+          "correct": true,
+          "explanation": "Rohdaten müssen bereinigt und für die Analyse vorbereitet werden."
+        },
+        {
+          "id": "c",
+          "text": "Exploratory Data Analysis (EDA)",
+          "correct": true,
+          "explanation": "EDA hilft dabei, Muster und Insights in den Daten zu entdecken."
+        },
+        {
+          "id": "d",
+          "text": "Model Training und Evaluation",
+          "correct": true,
+          "explanation": "Machine Learning Modelle werden trainiert und ihre Performance evaluiert."
+        },
+        {
+          "id": "e",
+          "text": "Hardware Installation",
+          "explanation": "Hardware Installation ist nicht Teil des Data Science Prozesses."
+        }
+      ]
+    },
+    {
+      "id": "ds-002",
+      "text": "Was ist der Unterschied zwischen Supervised und Unsupervised Learning?",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Supervised Learning verwendet gelabelte Daten, Unsupervised Learning nicht",
+          "correct": true,
+          "explanation": "Supervised Learning lernt von Input-Output-Paaren, Unsupervised Learning findet Muster in unlabelled Daten."
+        },
+        {
+          "id": "b",
+          "text": "Unsupervised Learning ist immer genauer"
+        },
+        {
+          "id": "c",
+          "text": "Supervised Learning funktioniert nur mit Zahlen"
+        },
+        {
+          "id": "d",
+          "text": "Es gibt keinen Unterschied"
+        }
+      ]
+    },
+    {
+      "id": "ds-003",
+      "text": "Welche Python-Bibliotheken sind essentiell für Data Science?",
+      "type": "multi",
+      "options": [
+        {
+          "id": "a",
+          "text": "NumPy",
+          "correct": true,
+          "explanation": "NumPy bietet effiziente Arrays und mathematische Operationen."
+        },
+        {
+          "id": "b",
+          "text": "Pandas",
+          "correct": true,
+          "explanation": "Pandas ermöglicht Datenmanipulation und -analyse mit DataFrames."
+        },
+        {
+          "id": "c",
+          "text": "Matplotlib/Seaborn",
+          "correct": true,
+          "explanation": "Diese Bibliotheken ermöglichen Datenvisualisierung und Plots."
+        },
+        {
+          "id": "d",
+          "text": "Scikit-learn",
+          "correct": true,
+          "explanation": "Scikit-learn bietet viele Machine Learning Algorithmen und Tools."
+        },
+        {
+          "id": "e",
+          "text": "Django",
+          "explanation": "Django ist ein Web-Framework, nicht primär für Data Science."
+        }
+      ]
+    },
+    {
+      "id": "ds-004",
+      "text": "Was bedeutet 'Overfitting' in Machine Learning?",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Das Modell hat zu wenige Parameter"
+        },
+        {
+          "id": "b",
+          "text": "Das Modell lernt die Trainingsdaten auswendig und generalisiert schlecht",
+          "correct": true,
+          "explanation": "Overfitting tritt auf, wenn ein Modell zu komplex ist und Noise in den Trainingsdaten als Muster lernt."
+        },
+        {
+          "id": "c",
+          "text": "Das Modell ist zu einfach"
+        },
+        {
+          "id": "d",
+          "text": "Das Training dauert zu lange"
+        }
+      ]
+    },
+    {
+      "id": "ds-005",
+      "text": "Erklären Sie was eine Korrelation ist und warum 'Correlation does not imply Causation'.",
+      "type": "text",
+      "explanation": "Korrelation misst den linearen Zusammenhang zwischen zwei Variablen (-1 bis +1). Eine hohe Korrelation bedeutet aber nicht, dass eine Variable die andere verursacht. Beispiel: Eisverkauf und Sonnenbrand korrelieren positiv, aber Eis verursacht keinen Sonnenbrand - beide werden durch warmes Wetter verursacht (confounding variable)."
+    },
+    {
+      "id": "ds-006",
+      "text": "Welche Arten von Machine Learning Algorithmen gibt es?",
+      "type": "multi",
+      "options": [
+        {
+          "id": "a",
+          "text": "Classification (Klassifikation)",
+          "correct": true,
+          "explanation": "Klassifikation ordnet Daten in vordefinierte Kategorien ein."
+        },
+        {
+          "id": "b",
+          "text": "Regression",
+          "correct": true,
+          "explanation": "Regression sagt kontinuierliche numerische Werte vorher."
+        },
+        {
+          "id": "c",
+          "text": "Clustering",
+          "correct": true,
+          "explanation": "Clustering gruppiert ähnliche Datenpunkte ohne vorgegebene Labels."
+        },
+        {
+          "id": "d",
+          "text": "Reinforcement Learning",
+          "correct": true,
+          "explanation": "Reinforcement Learning lernt durch Belohnung und Bestrafung in einer Umgebung."
+        }
+      ]
+    },
+    {
+      "id": "ds-007",
+      "text": "Was ist der Zweck einer Train-Test-Split?",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Die Daten gleichmäßig auf alle Computer zu verteilen"
+        },
+        {
+          "id": "b",
+          "text": "Die Performance des Modells auf ungesehenen Daten zu evaluieren",
+          "correct": true,
+          "explanation": "Test-Daten simulieren echte, ungesehene Daten und zeigen wie gut das Modell generalisiert."
+        },
+        {
+          "id": "c",
+          "text": "Den Speicherverbrauch zu reduzieren"
+        },
+        {
+          "id": "d",
+          "text": "Die Trainingsgeschwindigkeit zu erhöhen"
+        }
+      ]
+    },
+    {
+      "id": "ds-008",
+      "text": "Nennen Sie drei wichtige Metriken zur Bewertung von Classification-Modellen.",
+      "type": "text",
+      "explanation": "1) Accuracy (Genauigkeit): Anteil korrekt klassifizierter Instanzen. 2) Precision (Präzision): Von den als positiv klassifizierten, wie viele waren wirklich positiv? 3) Recall (Sensitivität): Von den wirklich positiven, wie viele wurden als positiv erkannt? Zusätzlich: F1-Score (harmonisches Mittel aus Precision und Recall)."
+    },
+    {
+      "id": "ds-009",
+      "text": "Was ist Feature Engineering?",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Das Design der Benutzeroberfläche"
+        },
+        {
+          "id": "b",
+          "text": "Der Prozess der Auswahl, Modifikation und Erstellung von Features",
+          "correct": true,
+          "explanation": "Feature Engineering transformiert Rohdaten in aussagekräftige Features, die Machine Learning Algorithmen besser verwenden können."
+        },
+        {
+          "id": "c",
+          "text": "Das Training neuronaler Netzwerke"
+        },
+        {
+          "id": "d",
+          "text": "Die Visualisierung von Daten"
+        }
+      ]
+    }
+  ]
+}

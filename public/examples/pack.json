@@ -1,0 +1,27 @@
+{
+  "title": "MDS Academy – Probezeit (Grundlagenpaket)",
+  "description": "Kompaktes Fragenpaket zu Unternehmenswissen, IT-Grundlagen, Netzwerktechnik und IT-Sicherheit – mit Erklärungen.",
+  "public": true,
+  "items": [
+    {
+      "id": "e34bf9b3",
+      "text": "Wer ist Geschäftsführer der MDSYSTEC GmbH?",
+      "type": "single",
+      "options": [
+        { "id": "a", "text": "Dieter Miedl", "correct": true },
+        { "id": "b", "text": "Max Mustermann" },
+        { "id": "c", "text": "Anna Schmidt" }
+      ]
+    },
+    {
+      "id": "a98sd7f",
+      "text": "Welche Zertifizierungen besitzt die MDSYSTEC GmbH?",
+      "type": "multi",
+      "options": [
+        { "id": "a", "text": "DIN EN ISO 9001:2015", "correct": true },
+        { "id": "b", "text": "ISO/IEC 27001:2013", "correct": true },
+        { "id": "c", "text": "CE-Kennzeichnung" }
+      ]
+    }
+  ]
+}

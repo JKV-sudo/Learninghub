@@ -1,0 +1,196 @@
+{
+  "title": "React Fundamentals - Grundlagen für Einsteiger",
+  "description": "Umfassendes Lernpaket zu React.js Grundlagen, Components, Props, State Management und Hooks. Ideal für Frontend-Entwickler die React lernen wollen.",
+  "tags": ["React", "JavaScript", "Frontend", "Webentwicklung", "Components", "Hooks"],
+  "public": true,
+  "items": [
+    {
+      "id": "react-001",
+      "text": "Was ist React.js?",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Eine JavaScript-Bibliothek zum Erstellen von Benutzeroberflächen",
+          "correct": true,
+          "explanation": "React ist eine deklarative, effiziente und flexible JavaScript-Bibliothek zum Erstellen von Benutzeroberflächen, entwickelt von Facebook."
+        },
+        {
+          "id": "b",
+          "text": "Ein CSS-Framework für responsive Designs",
+          "correct": false
+        },
+        {
+          "id": "c",
+          "text": "Eine Backend-Technologie für APIs",
+          "correct": false
+        },
+        {
+          "id": "d",
+          "text": "Ein Datenbank-Management-System",
+          "correct": false
+        }
+      ],
+      "explanation": "React revolutionierte die Frontend-Entwicklung durch das Component-Based Architecture und Virtual DOM."
+    },
+    {
+      "id": "react-002",
+      "text": "Welche der folgenden sind React Hooks?",
+      "type": "multi",
+      "options": [
+        {
+          "id": "a",
+          "text": "useState",
+          "correct": true,
+          "explanation": "useState ist der grundlegende Hook für State-Management in funktionalen Komponenten."
+        },
+        {
+          "id": "b",
+          "text": "useEffect",
+          "correct": true,
+          "explanation": "useEffect ermöglicht Side-Effects in funktionalen Komponenten."
+        },
+        {
+          "id": "c",
+          "text": "componentDidMount",
+          "correct": false,
+          "explanation": "componentDidMount ist eine Lifecycle-Methode von Class Components, kein Hook."
+        },
+        {
+          "id": "d",
+          "text": "useContext",
+          "correct": true,
+          "explanation": "useContext ermöglicht den Zugriff auf React Context in funktionalen Komponenten."
+        }
+      ],
+      "explanation": "React Hooks wurden in Version 16.8 eingeführt und ermöglichen State und andere React-Features in funktionalen Komponenten."
+    },
+    {
+      "id": "react-003",
+      "text": "Wie definiert man eine funktionale React-Komponente namens 'Welcome'?",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "function Welcome(props) { return <h1>Hello, {props.name}!</h1>; }",
+          "correct": true,
+          "explanation": "Dies ist die korrekte Syntax für eine funktionale Komponente mit Props."
+        },
+        {
+          "id": "b",
+          "text": "class Welcome extends Component { render() { return <h1>Hello!</h1>; } }",
+          "correct": false
+        },
+        {
+          "id": "c",
+          "text": "const Welcome = () => { console.log('Hello'); }",
+          "correct": false
+        },
+        {
+          "id": "d",
+          "text": "function Welcome() { return 'Hello'; }",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "react-004",
+      "text": "Was bewirkt der useEffect Hook ohne Dependency Array?",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Wird nur einmal beim Mount ausgeführt",
+          "correct": false
+        },
+        {
+          "id": "b",
+          "text": "Wird bei jedem Render ausgeführt",
+          "correct": true,
+          "explanation": "Ohne Dependency Array wird useEffect nach jedem Render ausgeführt."
+        },
+        {
+          "id": "c",
+          "text": "Wird nur beim Unmount ausgeführt",
+          "correct": false
+        },
+        {
+          "id": "d",
+          "text": "Wird niemals ausgeführt",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "react-005",
+      "text": "Erklären Sie den Unterschied zwischen Props und State in React.",
+      "type": "text",
+      "explanation": "Props sind Eingabeparameter einer Komponente (unveränderlich, von außen übergeben). State ist der interne Zustand einer Komponente (veränderlich, wird intern verwaltet). Props fließen von Parent zu Child, State wird lokal in der Komponente verwaltet."
+    },
+    {
+      "id": "react-006",
+      "text": "Welche Vorteile bietet das Virtual DOM?",
+      "type": "multi",
+      "options": [
+        {
+          "id": "a",
+          "text": "Bessere Performance durch Batch-Updates",
+          "correct": true,
+          "explanation": "Virtual DOM ermöglicht effiziente Batch-Updates und minimiert DOM-Manipulationen."
+        },
+        {
+          "id": "b",
+          "text": "Direkter Zugriff auf Browser-APIs",
+          "correct": false,
+          "explanation": "Virtual DOM abstrahiert vom echten DOM, bietet keinen direkten API-Zugriff."
+        },
+        {
+          "id": "c",
+          "text": "Predictable Updates durch Diffing-Algorithmus",
+          "correct": true,
+          "explanation": "Der Diffing-Algorithmus vergleicht Virtual DOM Trees und macht Updates vorhersagbar."
+        },
+        {
+          "id": "d",
+          "text": "Cross-Browser Kompatibilität",
+          "correct": true,
+          "explanation": "React abstrahiert Browser-Unterschiede durch das Virtual DOM."
+        }
+      ]
+    },
+    {
+      "id": "react-007",
+      "text": "Was ist JSX?",
+      "type": "single",
+      "options": [
+        {
+          "id": "a",
+          "text": "Eine Syntax-Erweiterung für JavaScript",
+          "correct": true,
+          "explanation": "JSX ermöglicht HTML-ähnliche Syntax in JavaScript und wird zu React.createElement() kompiliert."
+        },
+        {
+          "id": "b",
+          "text": "Ein neuer JavaScript-Standard",
+          "correct": false
+        },
+        {
+          "id": "c",
+          "text": "Eine Template-Engine",
+          "correct": false
+        },
+        {
+          "id": "d",
+          "text": "Ein CSS-Preprocessor",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "react-008",
+      "text": "Beschreiben Sie das Konzept von 'Lifting State Up' in React.",
+      "type": "text",
+      "explanation": "'Lifting State Up' bedeutet, den gemeinsamen State von Child-Komponenten in die nächste gemeinsame Parent-Komponente zu verschieben. Dadurch können Geschwister-Komponenten über Props kommunizieren und der State bleibt synchron."
+    }
+  ]
+}
