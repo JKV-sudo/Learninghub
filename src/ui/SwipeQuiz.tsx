@@ -16,59 +16,100 @@ interface QuizResult {
   userSwipe?: "left" | "right";
 }
 
-// Dynamic styling configurations for answers
+// Enhanced Dynamic styling configurations with more variety and cool animations
 const getAnswerStyle = (
   index: number,
   questionIndex: number,
   isSelected: boolean
 ) => {
   const styles = [
-    // Question 1: Classic rounded buttons with gradients
+    // Style 1: Holographic glass cards with shimmer
     {
-      base: "w-full text-left justify-center p-4 rounded-2xl border-2",
+      base: "w-full text-center p-5 rounded-2xl border-2 relative overflow-hidden backdrop-blur-md",
       selected:
-        "bg-gradient-to-r from-blue-500/40 to-purple-500/40 border-blue-400 scale-105 shadow-glow",
+        "bg-gradient-to-r from-blue-500/30 via-cyan-500/30 to-purple-500/30 border-cyan-300 scale-110 shadow-[0_0_25px_rgba(6,182,212,0.4)] animate-glow",
       unselected:
-        "bg-white/10 border-white/20 hover:bg-white/15 hover:border-white/30",
+        "bg-white/5 border-white/20 hover:bg-white/10 hover:border-white/30 hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]",
+      extra:
+        "before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/10 before:to-transparent before:-translate-x-full before:transition-transform before:duration-700 hover:before:translate-x-full",
     },
-    // Question 2: Square cards with neon effects
+    // Style 2: Neon cyber-punk cards
     {
-      base: "w-full text-center p-6 rounded-lg border border-cyan-400/30 bg-gradient-to-br from-cyan-900/20 to-blue-900/20",
+      base: "w-full text-left p-4 rounded-lg border-2 bg-gradient-to-r from-gray-900/40 to-black/40 relative font-mono",
       selected:
-        "border-cyan-400 bg-gradient-to-br from-cyan-500/30 to-blue-500/30 shadow-[0_0_20px_rgba(6,182,212,0.3)] scale-105",
+        "border-pink-400 bg-gradient-to-r from-pink-500/20 via-purple-500/20 to-cyan-500/20 scale-105 shadow-[0_0_30px_rgba(236,72,153,0.4)] animate-pulse-soft",
       unselected:
-        "hover:border-cyan-400/50 hover:bg-gradient-to-br hover:from-cyan-900/30 hover:to-blue-900/30",
+        "border-gray-600 hover:border-pink-400/60 hover:bg-gradient-to-r hover:from-pink-500/10 hover:to-purple-500/10 hover:shadow-[0_0_15px_rgba(236,72,153,0.2)]",
+      extra:
+        "after:absolute after:inset-0 after:rounded-lg after:bg-gradient-to-r after:from-transparent after:via-pink-400/10 after:to-transparent after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300",
     },
-    // Question 3: Pill-shaped with rainbow gradients
+    // Style 3: Floating bubble cards
     {
-      base: "w-full text-left justify-start p-3 rounded-full border-2",
+      base: "w-full text-center p-6 rounded-full border-2 relative overflow-hidden backdrop-blur-lg",
       selected:
-        "bg-gradient-to-r from-pink-500/40 via-purple-500/40 to-indigo-500/40 border-pink-400 scale-110 shadow-glow",
+        "bg-gradient-to-br from-emerald-400/25 via-teal-400/25 to-blue-400/25 border-emerald-300 scale-125 shadow-[0_0_40px_rgba(16,185,129,0.3)] animate-float",
       unselected:
-        "bg-white/5 border-white/15 hover:bg-white/10 hover:border-white/25",
+        "bg-white/8 border-white/15 hover:bg-white/12 hover:border-white/25 hover:scale-110 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]",
+      extra:
+        "before:absolute before:top-2 before:left-2 before:w-4 before:h-4 before:bg-white/20 before:rounded-full before:blur-sm",
     },
-    // Question 4: Modern glass cards
+    // Style 4: Diamond-shaped crystal cards
     {
-      base: "w-full text-center p-5 rounded-3xl backdrop-blur-xl border",
+      base: "w-full text-left p-5 border-2 relative backdrop-blur-sm transform -skew-y-1",
       selected:
-        "bg-gradient-to-r from-emerald-500/30 to-teal-500/30 border-emerald-400 shadow-[0_0_30px_rgba(16,185,129,0.2)] scale-105",
+        "bg-gradient-to-br from-violet-500/30 via-purple-500/30 to-fuchsia-500/30 border-violet-300 scale-110 skew-y-0 shadow-[0_0_35px_rgba(139,92,246,0.4)] animate-morph",
       unselected:
-        "bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20",
+        "bg-white/10 border-white/20 hover:bg-white/15 hover:border-white/30 hover:scale-105 hover:skew-y-0 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]",
+      extra:
+        "before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/5 before:to-transparent before:transform before:skew-y-1",
     },
-    // Question 5: Retro gaming style
+    // Style 5: Retro-wave cards with scanlines
     {
-      base: "w-full text-left justify-center p-4 rounded-lg border-2 font-mono",
+      base: "w-full text-center p-4 rounded-lg border-2 relative font-mono bg-gradient-to-b from-gray-900/50 to-black/70 overflow-hidden",
       selected:
-        "bg-gradient-to-r from-yellow-500/40 to-orange-500/40 border-yellow-400 scale-105 shadow-[0_0_20px_rgba(251,191,36,0.3)]",
+        "border-yellow-400 bg-gradient-to-b from-yellow-500/20 to-orange-500/20 scale-105 shadow-[0_0_25px_rgba(251,191,36,0.4)] animate-glow",
       unselected:
-        "bg-slate-800/50 border-slate-600 hover:bg-slate-700/50 hover:border-slate-500",
+        "border-gray-500 hover:border-yellow-400/60 hover:bg-gradient-to-b hover:from-yellow-500/10 hover:to-orange-500/10 hover:shadow-[0_0_15px_rgba(251,191,36,0.2)]",
+      extra:
+        "after:absolute after:inset-0 after:bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(255,255,255,0.05)_2px,rgba(255,255,255,0.05)_4px)] after:pointer-events-none",
+    },
+    // Style 6: Organic blob cards
+    {
+      base: "w-full text-center p-5 border-2 relative backdrop-blur-md animate-blob",
+      selected:
+        "bg-gradient-to-br from-rose-400/25 via-pink-400/25 to-red-400/25 border-rose-300 scale-115 shadow-[0_0_30px_rgba(251,113,133,0.4)]",
+      unselected:
+        "bg-white/8 border-white/15 hover:bg-white/12 hover:border-white/25 hover:scale-110 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]",
+      extra:
+        "before:absolute before:inset-1 before:rounded-2xl before:bg-gradient-to-br before:from-white/10 before:to-transparent before:pointer-events-none",
+    },
+    // Style 7: Prismatic rainbow cards
+    {
+      base: "w-full text-left p-4 rounded-2xl border-2 relative backdrop-blur-lg overflow-hidden",
+      selected:
+        "bg-gradient-to-r from-red-400/20 via-yellow-400/20 via-green-400/20 via-blue-400/20 via-indigo-400/20 to-purple-400/20 border-white/50 scale-110 shadow-[0_0_35px_rgba(255,255,255,0.3)] animate-shimmer",
+      unselected:
+        "bg-white/5 border-white/15 hover:bg-white/10 hover:border-white/25 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]",
+      extra:
+        "before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:-translate-x-full before:transition-transform before:duration-1000 hover:before:translate-x-full",
+    },
+    // Style 8: Minimal zen cards
+    {
+      base: "w-full text-center p-6 rounded-3xl border border-white/10 relative backdrop-blur-sm",
+      selected:
+        "bg-gradient-to-br from-slate-300/20 to-gray-300/20 border-white/30 scale-105 shadow-[0_0_20px_rgba(255,255,255,0.2)] animate-pulse-soft",
+      unselected:
+        "bg-white/5 hover:bg-white/10 hover:border-white/20 hover:scale-105 hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]",
+      extra:
+        "before:absolute before:top-3 before:right-3 before:w-2 before:h-2 before:bg-white/30 before:rounded-full before:animate-ping",
     },
   ];
 
   const style = styles[questionIndex % styles.length];
   return clsx(
     style.base,
-    "transition-all duration-300 ease-out transform",
+    style.extra || "",
+    "transition-all duration-500 ease-out transform cursor-pointer group",
     isSelected ? style.selected : style.unselected
   );
 };
@@ -366,10 +407,16 @@ export default function SwipeQuiz({ pack, onComplete }: SwipeQuizProps) {
                   "transform-gpu",
                   isActive &&
                     swipeDirection && [
-                      swipeDirection === "right" &&
-                        "translate-x-full rotate-12 opacity-0",
-                      swipeDirection === "left" &&
-                        "-translate-x-full -rotate-12 opacity-0",
+                      swipeDirection === "right" && [
+                        "translate-x-[120%] rotate-[25deg] scale-110 opacity-0",
+                        "shadow-[0_0_50px_rgba(34,197,94,0.6)]",
+                        "border-green-400/50 bg-gradient-to-r from-green-500/30 to-emerald-500/30",
+                      ],
+                      swipeDirection === "left" && [
+                        "-translate-x-[120%] -rotate-[25deg] scale-110 opacity-0",
+                        "shadow-[0_0_50px_rgba(239,68,68,0.6)]",
+                        "border-red-400/50 bg-gradient-to-r from-red-500/30 to-pink-500/30",
+                      ],
                     ],
                   !isActive && "pointer-events-none"
                 )}
@@ -432,8 +479,15 @@ export default function SwipeQuiz({ pack, onComplete }: SwipeQuizProps) {
                           }
                           disabled={!isActive || isAnimating}
                         >
-                          <span className="relative z-10 text-white font-medium">
-                            {option.text}
+                          <span className="relative z-10 text-white font-medium group-hover:text-white/90 transition-colors duration-300">
+                            <span className="relative">
+                              {option.text}
+                              {isSelected && (
+                                <span className="absolute -right-6 top-1/2 -translate-y-1/2 text-lg animate-bounce">
+                                  ✨
+                                </span>
+                              )}
+                            </span>
                           </span>
                         </button>
                       );

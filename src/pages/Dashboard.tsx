@@ -38,22 +38,25 @@ export default function Dashboard() {
     const run = async () => {
       try {
         const ref = collection(db, "packs");
-        const q = query(
-          ref,
-          where("ownerUid", "==", user.uid),
-          orderBy("createdAt", "desc")
-        );
+        const q = query(ref, where("ownerUid", "==", user.uid));
         const snap = await getDocs(q);
-        setPacks(
-          snap.docs.map((d) => ({
-            id: d.id,
-            title: d.get("title"),
-            description: d.get("description"),
-            public: !!d.get("public"),
-            createdAt: d.get("createdAt"),
-            tags: d.get("tags") || [],
-          }))
-        );
+        const packsData = snap.docs.map((d) => ({
+          id: d.id,
+          title: d.get("title"),
+          description: d.get("description"),
+          public: !!d.get("public"),
+          createdAt: d.get("createdAt"),
+          tags: d.get("tags") || [],
+        }));
+
+        // Sort client-side to avoid Firestore index issues
+        packsData.sort((a, b) => {
+          const aTime = a.createdAt?.toDate?.() || new Date(0);
+          const bTime = b.createdAt?.toDate?.() || new Date(0);
+          return bTime.getTime() - aTime.getTime();
+        });
+
+        setPacks(packsData);
       } catch (error) {
         console.error("Fehler beim Laden der Pakete:", error);
       } finally {
@@ -398,9 +401,14 @@ Thema: [HIER DEIN THEMA EINFÜGEN]`}
                     </div>
 
                     <div className="flex items-center gap-2">
+                      <Link to={`/packs/${pack.id}?mode=swipe`}>
+                        <Button variant="primary" size="sm">
+                          🎯 Swipe Quiz
+                        </Button>
+                      </Link>
                       <Link to={`/packs/${pack.id}`}>
                         <Button variant="secondary" size="sm">
-                          Öffnen
+                          📖 Öffnen
                         </Button>
                       </Link>
                       <Button

@@ -312,74 +312,80 @@ export default function Home() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {packs.map((pack, index) => (
-              <Link
+              <Card
                 key={pack.id}
-                to={`/packs/${pack.id}`}
-                className="block group animate-slide-up"
+                glass="medium"
+                className="h-full hover:scale-105 hover:shadow-glow-lg transition-all duration-500 relative overflow-hidden group animate-slide-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <Card
-                  glass="medium"
-                  className="h-full hover:scale-105 hover:shadow-glow-lg transition-all duration-500 relative overflow-hidden"
-                >
-                  {/* Animated background gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5 group-hover:from-blue-500/10 group-hover:to-purple-500/10 transition-all duration-500" />
+                {/* Animated background gradient */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5 group-hover:from-blue-500/10 group-hover:to-purple-500/10 transition-all duration-500" />
 
-                  <div className="relative z-10">
-                    <div className="flex items-start justify-between mb-4">
-                      <h3 className="font-bold text-white text-lg leading-tight flex-1 group-hover:text-blue-200 transition-colors">
-                        {pack.title}
-                      </h3>
-                      <div className="text-3xl ml-3 group-hover:scale-110 transition-transform">
-                        📖
-                      </div>
+                <div className="relative z-10 h-full flex flex-col">
+                  <div className="flex items-start justify-between mb-4">
+                    <h3 className="font-bold text-white text-lg leading-tight flex-1 group-hover:text-blue-200 transition-colors">
+                      {pack.title}
+                    </h3>
+                    <div className="text-3xl ml-3 group-hover:scale-110 transition-transform">
+                      📖
                     </div>
+                  </div>
 
-                    {pack.description && (
-                      <p className="text-white/70 text-sm mb-6 line-clamp-3 group-hover:text-white/90 transition-colors">
-                        {pack.description}
-                      </p>
-                    )}
+                  {pack.description && (
+                    <p className="text-white/70 text-sm mb-6 line-clamp-3 group-hover:text-white/90 transition-colors">
+                      {pack.description}
+                    </p>
+                  )}
 
-                    {pack.tags && pack.tags.length > 0 && (
-                      <div className="flex flex-wrap gap-2 mb-6">
-                        {pack.tags.slice(0, 3).map((tag, index) => (
-                          <Badge key={index} variant="primary" size="sm" glow>
-                            {tag}
-                          </Badge>
-                        ))}
-                        {pack.tags.length > 3 && (
-                          <Badge variant="glass" size="sm">
-                            +{pack.tags.length - 3}
-                          </Badge>
-                        )}
-                      </div>
-                    )}
+                  {pack.tags && pack.tags.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {pack.tags.slice(0, 3).map((tag, index) => (
+                        <Badge key={index} variant="primary" size="sm" glow>
+                          {tag}
+                        </Badge>
+                      ))}
+                      {pack.tags.length > 3 && (
+                        <Badge variant="glass" size="sm">
+                          +{pack.tags.length - 3}
+                        </Badge>
+                      )}
+                    </div>
+                  )}
 
-                    <div className="flex items-center justify-between mt-auto pt-4 border-t border-white/10">
+                  <div className="mt-auto space-y-3">
+                    <div className="flex items-center justify-between pt-4 border-t border-white/10">
                       <Badge variant="success" size="sm" glow>
                         🌍 Öffentlich
                       </Badge>
-                      <span className="text-blue-300 text-sm font-medium group-hover:text-blue-200 transition-colors flex items-center">
-                        Öffnen
-                        <svg
-                          className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
+                    </div>
+
+                    <div className="flex gap-2">
+                      <Link
+                        to={`/packs/${pack.id}?mode=swipe`}
+                        className="flex-1"
+                      >
+                        <Button
+                          variant="glass"
+                          size="sm"
+                          glow
+                          className="w-full text-sm"
                         >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 5l7 7-7 7"
-                          />
-                        </svg>
-                      </span>
+                          🎯 Swipe Quiz
+                        </Button>
+                      </Link>
+                      <Link to={`/packs/${pack.id}`} className="flex-1">
+                        <Button
+                          variant="glass"
+                          size="sm"
+                          className="w-full text-sm"
+                        >
+                          📖 Öffnen
+                        </Button>
+                      </Link>
                     </div>
                   </div>
-                </Card>
-              </Link>
+                </div>
+              </Card>
             ))}
           </div>
         )}

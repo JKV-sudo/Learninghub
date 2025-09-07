@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import { db } from "../utils/firebase";
 import { doc, getDoc } from "firebase/firestore";
 import Card from "../ui/Card";
@@ -8,9 +8,15 @@ import type { Pack } from "../types";
 
 export default function PackView() {
   const { id } = useParams<{ id: string }>();
+  const [searchParams] = useSearchParams();
   const [pack, setPack] = useState<Pack | null>(null);
   const [loading, setLoading] = useState(true);
-  const [viewMode, setViewMode] = useState<"swipe" | "traditional">("swipe");
+
+  // Set initial view mode based on URL parameter
+  const initialMode = searchParams.get("mode") === "swipe" ? "swipe" : "swipe";
+  const [viewMode, setViewMode] = useState<"swipe" | "traditional">(
+    initialMode
+  );
 
   useEffect(() => {
     const run = async () => {

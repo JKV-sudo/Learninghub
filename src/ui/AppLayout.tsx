@@ -12,7 +12,6 @@ export default function AppLayout() {
 
   const navigation = [
     { name: "Startseite", href: "/", icon: "🏠" },
-    { name: "Demo", href: "/demo", icon: "🎮" },
     { name: "Dashboard", href: "/dashboard", icon: "📊", requiresAuth: true },
     { name: "Importieren", href: "/import", icon: "📥", requiresAuth: true },
   ];

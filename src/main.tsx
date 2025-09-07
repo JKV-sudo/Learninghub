@@ -8,8 +8,7 @@ import Home from "./pages/Home";
 import ImportPack from "./pages/ImportPack";
 import Dashboard from "./pages/Dashboard";
 import PackView from "./pages/PackView";
-import DemoSimple from "./pages/DemoSimple";
-import DashboardDemo from "./pages/DashboardDemo";
+
 import { AuthProvider, useAuth } from "./state/AuthContext";
 
 function PrivateRoute({ children }: { children: JSX.Element }) {
@@ -31,8 +30,6 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Routes>
           <Route element={<AppLayout />}>
             <Route index element={<Home />} />
-            <Route path="/demo" element={<DemoSimple />} />
-            <Route path="/dashboard-demo" element={<DashboardDemo />} />
             <Route
               path="/import"
               element={

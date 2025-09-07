@@ -114,6 +114,9 @@ export default {
         'blob': 'blob 7s infinite',
         'spin-slow': 'spin 3s linear infinite',
         'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
+        'bounce-in': 'bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+        'swipe-right': 'swipeRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+        'swipe-left': 'swipeLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
       },
       keyframes: {
         fadeIn: {
@@ -161,6 +164,20 @@ export default {
         pulseSoft: {
           '0%, 100%': { opacity: '1', transform: 'scale(1)' },
           '50%': { opacity: '0.8', transform: 'scale(1.02)' },
+        },
+        bounceIn: {
+          '0%': { opacity: '0', transform: 'scale(0.3) translateY(100px)' },
+          '50%': { opacity: '1', transform: 'scale(1.05)' },
+          '70%': { transform: 'scale(0.9)' },
+          '100%': { opacity: '1', transform: 'scale(1) translateY(0)' },
+        },
+        swipeRight: {
+          '0%': { transform: 'translateX(0) rotate(0deg)', opacity: '1' },
+          '100%': { transform: 'translateX(100%) rotate(25deg)', opacity: '0' },
+        },
+        swipeLeft: {
+          '0%': { transform: 'translateX(0) rotate(0deg)', opacity: '1' },
+          '100%': { transform: 'translateX(-100%) rotate(-25deg)', opacity: '0' },
         },
       },
     },
