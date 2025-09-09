@@ -3,12 +3,14 @@ import { Outlet, Link, useLocation } from "react-router-dom";
 import { useAuth } from "../state/AuthContext";
 import { clsx } from "clsx";
 import Button from "./Button";
+import { LoginModal } from "../components/LoginModal";
 
 export default function AppLayout() {
-  const { user, signInWithGoogle, signOutUser } = useAuth();
+  const { user, signOutUser } = useAuth();
   const { pathname } = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [loginModalOpen, setLoginModalOpen] = useState(false);
 
   const navigation = [
     { name: "Startseite", href: "/", icon: "🏠" },
@@ -112,13 +114,13 @@ export default function AppLayout() {
             >
               {!user ? (
                 <Button
-                  onClick={signInWithGoogle}
+                  onClick={() => setLoginModalOpen(true)}
                   variant="glass"
                   size="sm"
                   icon={<span>🚀</span>}
                   glow
                 >
-                  Mit Google anmelden
+                  Anmelden
                 </Button>
               ) : (
                 <div className="flex items-center space-x-3">
@@ -326,6 +328,13 @@ export default function AppLayout() {
           </div>
         </div>
       </footer>
+
+      {/* Login Modal */}
+      <LoginModal
+        isOpen={loginModalOpen}
+        onClose={() => setLoginModalOpen(false)}
+        onSuccess={() => setLoginModalOpen(false)}
+      />
     </div>
   );
 }

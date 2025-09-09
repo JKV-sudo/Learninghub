@@ -9,7 +9,7 @@ interface LoadingSpinnerProps {
   glow?: boolean;
 }
 
-export default function LoadingSpinner({
+export function LoadingSpinner({
   size = "md",
   className,
   message = "Lädt...",
@@ -111,3 +111,5 @@ export default function LoadingSpinner({
     </div>
   );
 }
+
+export default LoadingSpinner;

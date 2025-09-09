@@ -11,7 +11,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   animated?: boolean;
 }
 
-export default function Button({
+export function Button({
   variant = "primary",
   size = "md",
   isLoading = false,
@@ -118,3 +118,5 @@ export default function Button({
     </button>
   );
 }
+
+export default Button;

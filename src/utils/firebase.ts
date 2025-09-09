@@ -14,6 +14,16 @@ const firebaseConfig = {
   measurementId: "G-W2FW5JT7GQ"
 }
 
+// Debug: Log configuration
+if (process.env.NODE_ENV === 'development') {
+  console.log('🔧 Firebase Config Debug:', {
+    projectId: firebaseConfig.projectId,
+    authDomain: firebaseConfig.authDomain,
+    currentUrl: typeof window !== 'undefined' ? window.location.href : 'server',
+    apiKey: firebaseConfig.apiKey?.substring(0, 20) + '...' // First 20 chars for security
+  })
+}
+
 // Firebase initialisieren
 const app = initializeApp(firebaseConfig)
 export const auth = getAuth(app)

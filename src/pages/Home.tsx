@@ -14,6 +14,7 @@ import Badge from "../ui/Badge";
 import LoadingSpinner from "../ui/LoadingSpinner";
 import { Link } from "react-router-dom";
 import { useAuth } from "../state/AuthContext";
+import { LoginModal } from "../components/LoginModal";
 
 type PublicPack = {
   id: string;
@@ -25,7 +26,8 @@ type PublicPack = {
 export default function Home() {
   const [packs, setPacks] = useState<PublicPack[]>([]);
   const [loading, setLoading] = useState(true);
-  const { user, signInWithGoogle } = useAuth();
+  const [loginModalOpen, setLoginModalOpen] = useState(false);
+  const { user } = useAuth();
 
   useEffect(() => {
     const run = async () => {
@@ -100,7 +102,7 @@ export default function Home() {
                   size="lg"
                   variant="glass"
                   glow
-                  onClick={signInWithGoogle}
+                  onClick={() => setLoginModalOpen(true)}
                   className="text-lg px-10 py-4"
                 >
                   🚀 Jetzt starten
@@ -298,8 +300,13 @@ export default function Home() {
               Sei der erste und teile dein Lernpaket mit der Community!
             </p>
             {!user ? (
-              <Button variant="glass" glow size="lg" onClick={signInWithGoogle}>
-                🚀 Mit Google anmelden
+              <Button
+                variant="glass"
+                glow
+                size="lg"
+                onClick={() => setLoginModalOpen(true)}
+              >
+                🚀 Anmelden
               </Button>
             ) : (
               <Link to="/import">
@@ -513,7 +520,7 @@ export default function Home() {
                 variant="glass"
                 size="lg"
                 glow
-                onClick={signInWithGoogle}
+                onClick={() => setLoginModalOpen(true)}
                 className="text-xl px-12 py-6 font-bold"
               >
                 🚀 Kostenlos anmelden
@@ -522,6 +529,13 @@ export default function Home() {
           </Card>
         </section>
       )}
+
+      {/* Login Modal */}
+      <LoginModal
+        isOpen={loginModalOpen}
+        onClose={() => setLoginModalOpen(false)}
+        onSuccess={() => setLoginModalOpen(false)}
+      />
     </div>
   );
 }
